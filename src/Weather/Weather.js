@@ -7,7 +7,7 @@ import { INITIAL_DATA_VALUE, API_KEY } from "../constants";
 
 const getWeatherData = (city, callback) => {
   fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${API_KEY}`
   )
     .then(res => res.json())
     .then(result => {
