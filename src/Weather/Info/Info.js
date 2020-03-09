@@ -30,7 +30,7 @@ const weatherInfo = (apiData, city) => {
 
 function Info(props) {
   return props.data === INITIAL_DATA_VALUE ? (
-    <h4>Loading...</h4>
+    <h4>Hello! Write your city, please.</h4>
   ) : (
     <div>{weatherInfo(props.data, props.city)}</div>
   );
