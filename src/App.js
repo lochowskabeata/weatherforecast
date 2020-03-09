@@ -10,11 +10,11 @@ import {
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Switch>
         <Route path="/" component={Weather} exact />
         <Route path="/404" component={NotFound} />
-        <Redirect from="*" to="/" />
+        <Redirect from="*" to="/404" />
       </Switch>
     </Router>
   );
