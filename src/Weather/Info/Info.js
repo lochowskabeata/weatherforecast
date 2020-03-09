@@ -29,7 +29,9 @@ const weatherInfo = (apiData, city) => {
 };
 
 function Info(props) {
-  return props.data === INITIAL_DATA_VALUE ? (
+  return props.error ? (
+    <h4>Sorry, cannot fetch data about weather.</h4>
+  ) : props.data === INITIAL_DATA_VALUE ? (
     <h4>Hello! Write your city, please.</h4>
   ) : (
     <div>{weatherInfo(props.data, props.city)}</div>
